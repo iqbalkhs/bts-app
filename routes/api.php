@@ -28,9 +28,9 @@ Route::post('/login', [AuthController::class, 'login']);
 
 Route::group(['middleware' => 'jwt.auth'], function () {
     // Checklist routes
-    Route::get('/checklists', [ChecklistController::class, 'index']);
-    Route::post('/checklists', [ChecklistController::class, 'store']);
-    Route::delete('/checklists/{checklistId}', [ChecklistController::class, 'destroy']);
+    Route::get('/checklist', [ChecklistController::class, 'index']);
+    Route::post('/checklist', [ChecklistController::class, 'store']);
+    Route::delete('/checklist/{checklistId}', [ChecklistController::class, 'destroy']);
     
 
     // ChecklistItem routes
