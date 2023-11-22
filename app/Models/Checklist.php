@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Checklist extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id'];
+
+    public function checkListItem()
+    {
+        return $this->hasMany(ChecklistItem::class);
+    }
 }
